@@ -1,0 +1,13 @@
+Package: fasterElasticNet
+Type: Package
+Title: An amazing fast way to fit elastic net
+Version: 1.0.0
+Date: 2018-05-30
+Author: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang
+Maintainer: Jingyi Ma <jingyima@163.com>
+Description: A short (one paragraph) description of whatthe package does and why it may be useful.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.16)
+LinkingTo: Rcpp, RcppArmadillo
+NeedsCompilation: yes
+Packaged: 2018-06-06 16:10:46 UTC; 379225250
