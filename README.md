@@ -4,7 +4,15 @@
 
 ***
 ### Info
-Version:1.0.0
+*Version*: 1.0.0
+*Date*: 2018-05-30
+*Author*: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang
+*Maintainer*: Jingyi Ma <jingyima@163.com>
+　　　　　Linyu Zuo <zuozhe5959@gmail.com>
+*License*: GPL (>= 2)
+*Imports*: Rcpp (>= 0.12.16)
+*LinkingTo*: Rcpp, RcppArmadillo
+*NeedsCompilation*: yes
 
 ***
 
@@ -14,11 +22,11 @@ Version:1.0.0
 install.packages(devtools)
 library(devtools)
 ```
-- install **Rcpp** and **RcppArmadillo**
+- install `Rcpp` and `RcppArmadillo`
 ```
 install.packages(c('Rcpp', 'RcppArmadillo'))
 ```
-- install **fasterElasticNet**
+- install `fasterElasticNet`
 ```
 devtools::install_github('CUFESAM/Elastic-Net')
 ```
