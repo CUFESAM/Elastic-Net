@@ -12,7 +12,8 @@
 
 *Maintainer*: Jingyi Ma <jingyima@163.com>
 
-　　　　　Linyu Zuo <zuozhe5959@gmail.com>
+　　　　&nbsp;　Linyu Zuo <zuozhe5959@gmail.com>
+
 *License*: GPL (>= 2)
 
 *Imports*: Rcpp (>= 0.12.16)
