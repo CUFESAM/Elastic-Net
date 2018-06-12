@@ -42,5 +42,8 @@ devtools::install_github('CUFESAM/Elastic-Net')
 ***
 
 ### 更新日志|Update log
+#### v1.1.0
+- Adding Dataset 'Housing'.
+
 #### v1.0.0
 - Creat Package and upload.
