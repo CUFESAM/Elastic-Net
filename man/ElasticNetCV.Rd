@@ -4,7 +4,7 @@
 Cross validation
 }
 \description{
-Perform cross validation of the elastic net
+Perform the cross validation of the elastic net
 }
 \usage{
 ElasticNetCV(x, y)

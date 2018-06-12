@@ -25,4 +25,7 @@ Maintainer: \packageMaintainer{fasterElasticNet}
 ~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R ~~
 ~~ documentation directory ~~
 }
+\examples{
+  a = c(1, 2)
+}
 \keyword{ package }
