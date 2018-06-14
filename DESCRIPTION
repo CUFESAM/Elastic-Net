@@ -14,7 +14,8 @@ Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
 			 person("Xiao","Liu", email = "unknown@email.com", role = 'ctb'),
 			 person("Xueni","Ruan", email = "unknown@email.com", role = 'ctb'),
 			 person("Xinyuan","Yang", email = "unknown@email.com", role = 'ctb'),
-			 person("Yu","Bai", email = "unknown@email.com", role = 'ctb')
+			 person("Yu","Bai", email = "unknown@email.com", role = 'ctb'),
+			 person("Zhijun","Liao", email = "unknown@email.com", role = 'ctb')
 			 )
 Description: Fit elastic net, lasso and ridge in a faster way than existing r-package.
 Depends: R (>= 3.1.0)
