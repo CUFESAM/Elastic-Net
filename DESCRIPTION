@@ -6,8 +6,8 @@ Date: 2018-05-30
 Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut", "cre")),
 			 person("Qiuhong","La",email = "unknow@email.com", role = "aut"),
 			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = "aut"),
-			 person("Yi","Yang",email = "lucious.stat.y@gmail.com", role = "cre"),
-			 person("Meng","Su",email = "SUmeng97@126.com", role = "cre"))
+			 person("Yi","Yang",email = "lucious.stat.y@gmail.com", role = "aut"),
+			 person("Meng","Su",email = "SUmeng97@126.com", role = "aut"))
 Description: Fit elastic net, lasso and ridge in a faster way than existing r-package.
 Depends: R (>= 3.1.0)
 License: GPL (>= 2)
