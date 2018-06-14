@@ -4,11 +4,11 @@ Title: An amazing fast way to fit elastic net
 Version: 1.1.0
 Date: 2018-05-30
 Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
-			 person("Qiuhong","La",email = "unknown@email.com", role = "aut"),
-			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = "aut"),
-			 person("Yi","Yang",email = "lucious.stat.y@gmail.com", role = "aut"),
+			 person("Qiuhong","Lai",email = "unknown@email.com", role = "ctb"),
+			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = "ctb"),
+			 person("Yi","Yang",email = "lucious.stat.y@gmail.com", role = "ctb"),
 			 person("CUFESAM", email = "CUFEsamAD@gmail.com",role = "cre"),
-			 person("Meng","Su",email = "SUmeng97@126.com", role = "aut"),
+			 person("Meng","Su",email = "SUmeng97@126.com", role = "ctb"),
 			 person("Zhen","Yu", email = "unknown@email.com", role = 'ctb'),
 			 person("Gege","Gao", email = "unknown@email.com", role = 'ctb'),
 			 person("Xiao","Liu", email = "unknown@email.com", role = 'ctb'),
