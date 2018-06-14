@@ -3,7 +3,11 @@ Type: Package
 Title: An amazing fast way to fit elastic net
 Version: 1.1.0
 Date: 2018-05-30
-Author: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang
+Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut", "cre"))
+			 preson("Qiuhong","La",email = "unknow@email.com", role = "aut")
+			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = "aut")
+			 person("Yi","Yang",email = "lucious.stat.y@gmail.com", role = "cre")
+			 person("Meng","Su",email = "SUmeng97@126.com", role = "cre"))
 Maintainer: Jingyi Ma <jingyima@163.com>
 Description: Fit elastic net, lasso and ridge in a faster way than existing r-package.
 Depends: R (>= 3.1.0)
