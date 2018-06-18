@@ -3,7 +3,6 @@
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::plugins("cpp11")]]
-// [[Rcpp::export]]
 
 void givens(arma::mat & L, arma::uword & k){
   arma::uword p = L.n_rows;

@@ -1,18 +1,27 @@
 \name{givens}
 \alias{givens}
-\title{
-Construct a givens transformation matrix
-}
-\description{
-In givens transformation, if we want a vector to rotate a angle \eqn{\theta} clockwise, we are supposed to construct a matrix with format of:
-  \deqn{|cos(\theta) sin(\theta)|}
-  \deqn{|-sin(\theta) cos(\theta)|}
-
-}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{Solve equation set via givens transformation}
 \usage{
 givens(L, k)
 }
 \arguments{
-  \item{L}{two numbers}
-  \item{k}{square root of the sumption of the square of the mx}
+\item{L}{an n*n lower triangular matrix}
+
+\item{k}{the k-th row to be removed}
+}
+\value{
+givens gives the (n-1)*(n-1) dimensional lower triangular
+coefficient matrix from a n*n lower triangular coefficient matrix removing some variable.
+}
+\description{
+Using givens transformation to save unnecessary computation
+}
+\details{
+When solve object function of linear regression, it's necessary to calculate t(X)\%*\%X, which is a lot of computation expensive with regards
+to variable coming in and out in lasso. Using givens transformation to spare repeating
+computation and get coefficient from the original lower triangular matrix.
+}
+\references{
+https://www.researchgate.net/publication/228964850_Generalized_Givens_Transformation_and_its_Application
 }

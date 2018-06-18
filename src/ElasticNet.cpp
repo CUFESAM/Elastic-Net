@@ -13,7 +13,7 @@ void PushBack(arma::uvec & A, arma::uword & j){
 
 // [[Rcpp::export]]
 
-Rcpp::List elasticnetcpp(arma::mat & XTX, arma::vec & XTY,
+Rcpp::List elasticnet(arma::mat & XTX, arma::vec & XTY,
 						double lam2 ,double lam1 = -1){
 
 	int p = XTX.n_rows;
