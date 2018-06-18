@@ -4,9 +4,9 @@
 
 ***
 ### Info
-*Version*: 1.0.0
+*Version*: 1.1.1
 
-*Date*: 2018-05-30
+*Date*: 2018-06.18
 
 *Author*: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang
 
@@ -42,6 +42,9 @@ devtools::install_github('CUFESAM/Elastic-Net')
 ***
 
 ### 更新日志|Update log
+#### v1.1.1|18.6.18
+- Update Rd, edit functions' name.
+
 #### v1.1.0
 - Adding Dataset 'Housing'.
 
