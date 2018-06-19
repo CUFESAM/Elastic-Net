@@ -1,28 +1,69 @@
 \name{forupdate}
+
 \alias{forupdate}
+
 \title{
-Choleski decomposition on extra element
+
+Cholesky decomposition of a matrix added to a new column
+
 }
+
 \description{
-forupdate takes the original choleski decomposition of x, variable L in this case, outer product of original element and extra element, variable xxk in this case, and outer product of extra element itself, variable xkxk in this case, then gives the choleski decomposition of combination of original element and extra element.
+
+forupdate takes the Cholesky factor(the lower triangular matrix) of the multiplication of  the original matrix x and its transpose, the multiplication result of x transpose and the coloumn vector to be added, and the inner product of the column vector as parameters, and returns the Cholesky factor of the updated matrix.
+
 }
+
 \usage{
+
 forupdate(L, xxk, xkxk)
+
 }
+
 \arguments{
-  \item{L}{lower triangular matrix in choleski decomposition of original element x*x^T}
-  \item{xxk}{outer product of original element and extra element}
-  \item{xkxk}{outer product of extra element itself}
+
+  \item{L}{a lower triangular matrix which is the Cholesky factor of original x^T*x}
+
+  \item{xxk}{multiplication result of original matrix and the column to be added}
+
+  \item{xkxk}{inner product of the new column vector}
+
 }
+
 \value{
-  gives returns a (p + px)*(p + px) dimensional lower triangular matrxi.
+
+The lower triangular Cholesky factor of the multiplication result of the updated matrix(X) and its transpose, i.e. \eqn{L'L=X^T*X}.
+
 }
+
 \examples{
-#x = matrix(rnorm(5), ncol = 1)
-#xk = matrix(rnorm(1), ncol = 1)
-#xxk = x\%*\%t(xk)
-#xkxk = xk\%*\%t(xk)
-#L = chol(x\%*\%t(x))
-#chol(rbind(x, xk)\%*\%t(rbind(x, xk)))
-#forupdate(L, xxk, xkxk)
+
+x <- matrix(rnorm(60),10)  #the original matrix x
+
+##cholesky decomposition of t(x)\%*\%x
+
+xtx <- t(x)\%*\%x
+
+L <- t(chol(xtx))
+
+xk <- matrix(rnorm(10),ncol = 1) #the column to be added
+
+##parameters of function 'forupdate'
+
+xxk <- t(x)\%*\%xk
+
+xkxk <- sum(xk*xk)
+
+##obtain Cholesky factor of the updated matrix t(X)\%*\%X using forupdate
+
+L_new_f <- forupdate(L, xxk, xkxk)
+
+##obtain Cholesky factor by  performing Cholesky decomposition on the new matrix
+
+X <- cbind(x,xk)
+
+XTX <- t(X)\%*\%X
+
+L_new_c <- t(chol(XTX))
+
 }
