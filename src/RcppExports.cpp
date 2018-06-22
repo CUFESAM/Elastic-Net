@@ -6,9 +6,9 @@
 
 using namespace Rcpp;
 
-// elasticnetcpp
-Rcpp::List elasticnetcpp(arma::mat& XTX, arma::vec& XTY, double lam2, double lam1);
-RcppExport SEXP _fasterElasticNet_elasticnetcpp(SEXP XTXSEXP, SEXP XTYSEXP, SEXP lam2SEXP, SEXP lam1SEXP) {
+// elasticnet
+Rcpp::List elasticnet(arma::mat& XTX, arma::vec& XTY, double lam2, double lam1);
+RcppExport SEXP _fasterElasticNet_elasticnet(SEXP XTXSEXP, SEXP XTYSEXP, SEXP lam2SEXP, SEXP lam1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -16,38 +16,13 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< arma::vec& >::type XTY(XTYSEXP);
     Rcpp::traits::input_parameter< double >::type lam2(lam2SEXP);
     Rcpp::traits::input_parameter< double >::type lam1(lam1SEXP);
-    rcpp_result_gen = Rcpp::wrap(elasticnetcpp(XTX, XTY, lam2, lam1));
+    rcpp_result_gen = Rcpp::wrap(elasticnet(XTX, XTY, lam2, lam1));
     return rcpp_result_gen;
-END_RCPP
-}
-// forupdate
-void forupdate(arma::mat& L, arma::vec& xxk, double& xkxk);
-RcppExport SEXP _fasterElasticNet_forupdate(SEXP LSEXP, SEXP xxkSEXP, SEXP xkxkSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat& >::type L(LSEXP);
-    Rcpp::traits::input_parameter< arma::vec& >::type xxk(xxkSEXP);
-    Rcpp::traits::input_parameter< double& >::type xkxk(xkxkSEXP);
-    forupdate(L, xxk, xkxk);
-    return R_NilValue;
-END_RCPP
-}
-// givens
-void givens(arma::mat& L, arma::uword& k);
-RcppExport SEXP _fasterElasticNet_givens(SEXP LSEXP, SEXP kSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< arma::mat& >::type L(LSEXP);
-    Rcpp::traits::input_parameter< arma::uword& >::type k(kSEXP);
-    givens(L, k);
-    return R_NilValue;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_fasterElasticNet_elasticnetcpp", (DL_FUNC) &_fasterElasticNet_elasticnetcpp, 4},
-    {"_fasterElasticNet_forupdate", (DL_FUNC) &_fasterElasticNet_forupdate, 3},
-    {"_fasterElasticNet_givens", (DL_FUNC) &_fasterElasticNet_givens, 2},
+    {"_fasterElasticNet_elasticnet", (DL_FUNC) &_fasterElasticNet_elasticnet, 4},
     {NULL, NULL, 0}
 };
 

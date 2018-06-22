@@ -8,9 +8,7 @@ Perform the cross validation of the elastic net.
 }
 \usage{
 ElasticNetCV(x, y)
-ElasticNetCV(x, y)$Elasticnet(lambda1 = -1, lambda2)
-ElasticNetCV(x, y)$cv.choosemodel(lambda2 = NULL, k)
-ElasticNetCV(x, y)$output()
+
 }
 \arguments{
   \item{x}{ A data.frame or matrix of features }
@@ -28,19 +26,21 @@ A list of three functions will be returned containing:
 }
 
 \examples{
-data(housing)
-x <- housing[,-140]
-y <- housing[,140]
-cvfit <- ElasticNetCV(x,y)
+\dontrun{
+	data(housing)
+	x <- housing[,-140]
+	y <- housing[,140]
+	cvfit <- ElasticNetCV(x,y)
 
-# perform cross validation and print output
-cvfit$cv.choosemodel(k = 20)
-cvfit$output()
+	# perform cross validation and print output
+	cvfit$cv.choosemodel(k = 20)
+	cvfit$output()
 
-# perform elasticnet
-cvfit$Elasticnet(lambda1 = 30,lambda2 = 0.005)
+	# perform elasticnet
+	cvfit$Elasticnet_(lambda1 = 30,lambda2 = 0.005)
 
-# return the trajectory of lambda1 and corresponding coefficient of each variable
-cvfit$Elasticnet(lambda2 = 0.005)
+	# return the trajectory of lambda1 and corresponding coefficient of each variable
+	cvfit$Elasticnet_(lambda2 = 0.005)
+}
 }
 

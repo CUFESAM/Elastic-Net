@@ -2,7 +2,7 @@
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::plugins("cpp11")]]
-// [[Rcpp::export]]
+
 
 void forupdate(arma::mat & L, arma::vec & xxk, double & xkxk){
   arma::vec lk = arma::solve(arma::trimatl(L), xxk);

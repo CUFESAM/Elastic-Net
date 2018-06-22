@@ -7,7 +7,7 @@ A fast way fitting elastic net using RcppArmadillo
 ElasticNet is a regression using regularized method which linearly combines the L1 and L2 penalties of the lasso and ridge methods. For given variables and ratio of L2-norm, sometimes with givens ratio of L1-norm, Elastic will return the trace of choosing the best linear regression model. Conparing with the existed R version ElasticNet, we using givens rotation and forward update to speed up the method which is slow when dealing with big data.
 }
 \usage{
-elasticnetcpp(XTX, XTY, lam2, lam1 = -1)
+elasticnet(XTX, XTY, lam2, lam1 = -1)
 }
 \arguments{
   \item{XTX}{
@@ -38,15 +38,15 @@ If lambda1/2 is assigned, the coefficients under which will also be returned.
 }
 
 \examples{
-  library(ElemStatLearn)
-  data(porstate)            #provide data
-
-  x <- as.matrix(prostate[,1:8])
-  y <- prostate[,9]
-  XTX <- t(x) %*% x
-  XTY <- t(x) %*% y
-
   \dontrun{
+    install.packages(ElemStatLearn)
+    library(ElemStatLearn)
+    data(porstate)            #provide data
+
+    x <- as.matrix(prostate[,1:8])
+    y <- prostate[,9]
+    XTX <- t(x) %*% x
+    XTY <- t(x) %*% y
     res <- elasticnet(XTX,XTY,lam2 = 0)
   }
 }

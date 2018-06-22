@@ -1,3 +1,5 @@
+#' @export
+
 msig <- function(p,rho){
   if(p==1){
     return ( matrix(1,p,p) )
