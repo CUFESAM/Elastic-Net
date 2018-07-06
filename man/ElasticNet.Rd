@@ -45,8 +45,8 @@ If lambda1/2 is assigned, the coefficients under which will also be returned.
 
     x <- as.matrix(prostate[,1:8])
     y <- prostate[,9]
-    XTX <- t(x) %*% x
-    XTY <- t(x) %*% y
+    XTX <- t(x) \%*\% x
+    XTY <- t(x) \%*\% y
     res <- elasticnet(XTX,XTY,lam2 = 0)
   }
 }
