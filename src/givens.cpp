@@ -8,9 +8,9 @@ void givens(arma::mat & L, arma::uword & k){
   arma::uword p = L.n_rows;
   arma::uword n = L.n_cols;
 	if (p != n) 
-		std::cout << "Wrong Matrix";
+		Rf_error("Wrong Matrix");
 	if (k > p)
-		std::cout << "Wrong input of k";
+		Rf_error("Wrong input of k");
 	L.shed_row(k);
 
 	arma::uword mk = k;
