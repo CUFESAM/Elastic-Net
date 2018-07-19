@@ -1,5 +1,3 @@
-#' @export
-
 ElasticNetCV = function(x, y){         
   np <- dim(x)                 
   n <- np[1]                            
@@ -20,7 +18,7 @@ ElasticNetCV = function(x, y){
   lambdav <- NULL                          
   CV_mse <- NULL
   com <- NULL
-
+  
   list(
     Elasticnet_ = function(lambda1= -1,lambda2){ 
       b_ <- elasticnet(xtx,xty,lam1=lambda1,lam2=lambda2) 
@@ -122,6 +120,12 @@ ElasticNetCV = function(x, y){
       cat('b:',b,"\n")
       cat("lambda1",lambdav[1],"\n")
       cat("lambda2",lambdav[2],"\n") 
+    },
+    predict = function(data){
+      rows <- dim(data)[1]
+      data_new <- as.matrix(cbind(rep(1,rows),data))
+      out <- data_new %*% b
+      return(out)
     }
   )
 }
