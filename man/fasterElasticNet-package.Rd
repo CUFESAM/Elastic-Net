@@ -18,7 +18,7 @@ FasterElasticNet uses some math algorithm such as cholesky decomposition and for
 \author{
 \packageAuthor{Jingyi Ma}
 
-Maintainer: \packageMaintainer{CUFESAM}
+\packageMaintainer{CUFESAM}
 }
 
 \keyword{ package }
