@@ -17,7 +17,7 @@ FasterElasticNet uses some math algorithm such as cholesky decomposition and for
 }
 
 \author{
-\strong{Maintainer}: CUFESAM \email{hadley@rstudio.com} (0000-0003-4757-117X)
+\strong{Maintainer}: CUFESAM \email{hadley@rstudio.com}
 
 Authors:
 \itemize{
