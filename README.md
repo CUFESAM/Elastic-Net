@@ -4,9 +4,9 @@
 
 ***
 ### Info
-*Version*: 1.1.1
+*Version*: 1.1.2
 
-*Date*: 2018-06.18
+*Date*: 2018-07.19
 
 *Author*: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang
 
