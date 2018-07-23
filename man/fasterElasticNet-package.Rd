@@ -15,10 +15,13 @@ The DESCRIPTION file:
 \packageIndices{fasterElasticNet}
 FasterElasticNet uses some math algorithm such as cholesky decomposition and forward solve etc. to reduce the amount of computation. We also use Rcpp with Armadillo to improve our algorithm by speeding up almost 5 times compared by the R version.
 }
-\author{
-\packageAuthor{"JingyiMa"}
 
-\packageMaintainer{CUFESAM}
+\author{
+\strong{Maintainer}: CUFESAM \email{hadley@rstudio.com} (0000-0003-4757-117X)
+
+Authors:
+\itemize{
+  \item JingyiMa 
 }
 
 \keyword{ package }
