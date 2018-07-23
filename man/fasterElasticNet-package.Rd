@@ -13,19 +13,12 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{fasterElasticNet}
 \packageIndices{fasterElasticNet}
-~~ An overview of how to use the package, including the most important functions ~~
+FasterElasticNet uses some math algorithm such as cholesky decomposition and forward solve etc. to reduce the amount of computation. We also use Rcpp with Armadillo to improve our algorithm by speeding up almost 5 times compared by the R version.
 }
 \author{
-\packageAuthor{fasterElasticNet}
+\packageAuthor{Jingyi Ma}
 
-Maintainer: \packageMaintainer{fasterElasticNet}
+Maintainer: \packageMaintainer{CUFESAM}
 }
-\references{
-~~ Literature or other references for background information ~~
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R ~~
-~~ documentation directory ~~
-}
-\examples{
-  a = c(1, 2)
-}
+
 \keyword{ package }
