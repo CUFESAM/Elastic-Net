@@ -23,5 +23,6 @@ Authors:
 \itemize{
   \item JingyiMa 
 }
+}
 
 \keyword{ package }
