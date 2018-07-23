@@ -16,7 +16,7 @@ The DESCRIPTION file:
 FasterElasticNet uses some math algorithm such as cholesky decomposition and forward solve etc. to reduce the amount of computation. We also use Rcpp with Armadillo to improve our algorithm by speeding up almost 5 times compared by the R version.
 }
 \author{
-\packageAuthor{Jingyi Ma}
+\packageAuthor{person("Jingyi", "Ma")}
 
 \packageMaintainer{CUFESAM}
 }
