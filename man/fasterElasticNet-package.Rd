@@ -17,12 +17,8 @@ FasterElasticNet uses some math algorithm such as cholesky decomposition and for
 }
 
 \author{
-\strong{Maintainer}: CUFESAM \email{CUFEsamAD@gmail.com}
-
-Authors:
-  \itemize{
-  \item JingyiMa 
-}
+\packageAuthor{Jingyi Ma}
+Maintainer: \packageMaintainer{CUFESAM}   
   
 }
 
