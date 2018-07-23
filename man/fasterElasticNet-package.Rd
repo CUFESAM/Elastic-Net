@@ -17,12 +17,13 @@ FasterElasticNet uses some math algorithm such as cholesky decomposition and for
 }
 
 \author{
-\strong{Maintainer}: CUFESAM \email{hadley@rstudio.com}
+\strong{Maintainer}: CUFESAM \email{CUFEsamAD@gmail.com}
 
 Authors:
-\itemize{
+  \itemize{
   \item JingyiMa 
 }
+  
 }
 
 \keyword{ package }
