@@ -40,7 +40,7 @@ ElasticNetCV = function(x, y){
     
     cv.choosemodel = function(lambda2=NULL, k){
       index <- sample(c(rep(1:k, n%/%k), sample(1:k, n%%k)),n) 
-      if( is.null(lambda2) ) lambda2 <- seq(0,1,0.1)
+      if( is.null(lambda2) ) lambda2 <- seq(0,0.5,0.01)
       lam2_seq <- lambda2 
       nlam <- length(lam2_seq)
       mse_sum <- list()
