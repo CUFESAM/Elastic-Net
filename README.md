@@ -42,6 +42,7 @@ devtools::install_github('CUFESAM/Elastic-Net')
 ### 更新日志|Update log
 #### v1.1.2|18.7.19
 - Add a **predict function**.
+- Update Makevars
 
 #### v1.1.1|18.6.18
 - Update Rd, edit functions' name.

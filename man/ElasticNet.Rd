@@ -41,7 +41,7 @@ If lambda1/2 is assigned, the coefficients under which will also be returned.
   \dontrun{
     install.packages(ElemStatLearn)
     library(ElemStatLearn)
-    data(porstate)            #provide data
+    data(prostate)            #provide data
 
     x <- as.matrix(prostate[,1:8])
     y <- prostate[,9]
