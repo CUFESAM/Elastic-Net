@@ -4,26 +4,27 @@
 Cross validation
 }
 \description{
-Perform the cross validation of the elastic net.
+Computes k-fold cross-validation for elastic net.
 }
 \usage{
 ElasticNetCV(x, y)
 
 }
 \arguments{
-  \item{x}{ A data.frame or matrix of features }
-  \item{y}{ A vector of response}
+  \item{x}{ A data.frame or matrix of predictors}
+  \item{y}{ A vector of response variables}
 }
 
 \details{
-This function only reads data into its environment, and returns a list of three functions. To perform elastic net or cross validation of elastic net, access the corresponding element of the returned list. See examples below.
+This function reads data into its environment and returns a list of three outcomes. To perform elastic net or cross-validation of elastic net, use the corresponding element of the returned list. See examples below.
+The penalty of L1-norm and L2-norm is denoted by lambda1 and lambda2 respectively.
 }
 \value{
-A list of three functions will be returned containing:
-  \item{Elasticnet}{Given lambda1 (optional) and lambda2, performs elastic net and returns the coefficients of each variable. If lambda1 is not passed, prints out the complete trajectory of lambda1 and corresponding coefficient of each variable.}
-  \item{cv.choosemodel}{Given the parameter k folds and lambda2 (optional), performs cross validation to select the optimal lambda1 and coefficient of each variable. If lambda2 is not passed, selects the optimal lambda2 from 0 to 0.01 by the increment of 0.001, as well as the corresponding optimal lambda1 and coefficient of each variable. }
-  \item{output}{Prints the cross validation output, including minimum MSE, coefficients of each variable, lambda1 and lambda2.}
-  \item{predict}{The predict function puts data.frame with same size into the model which Elastic Net has trained and return the prediction.}
+  \item{cv.choosemodel}{Given the parameter k folds and lambda2 (optional),  cv.choosemodel performs cross-validation  to  select  the  opti-  mal lambda1 and computes the corresponding coefficient of each variable. If lambda2 is NULL, cv.choosemodel selects the optimal lambda2 from a sequence going from 0 to 0.5 in steps of 0.01 and the corresponding optimal lambda1, then it returns the coefficient of each variable.}
+A list of three outcomes will be returned:
+  \item{Elasticnet}{Given lambda1 (optional) and lambda2, Elasticnet_ calculates an elastic net-regularized regression and returns the coefficients of each variable. If lambda1 is NULL, Elasticnet_ prints out the trace of lambda1 and the corresponding coefficient of each variable.}
+  \item{output}{Prints the cross-validation outputs,  including the minimum   MSE, the coefficient of each variable, lambda1 and lambda2.}
+  \item{predict}{Reads a data.frame of the testing data set and returns  predictions using the trained model.}
 }
 
 \examples{
@@ -42,6 +43,14 @@ A list of three functions will be returned containing:
 
 	# return the trajectory of lambda1 and corresponding coefficient of each variable
 	cvfit$Elasticnet_(lambda2 = 0.005)
+
+	#prediction
+
+
+	pre_index <- sample(1:dim(housing)[1],100)
+	x_pre <- housing[pre_index,-140]
+	cvfit$predict(x_pre)                  #predicted by ElasticNet
+	housing[pre_index,140]          #True Value
 }
 }
 

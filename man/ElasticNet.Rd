@@ -4,37 +4,38 @@
 A fast way fitting elastic net using RcppArmadillo
 }
 \description{
-ElasticNet is a regression using regularized method which linearly combines the L1 and L2 penalties of the lasso and ridge methods. For given variables and ratio of L2-norm, sometimes with givens ratio of L1-norm, Elastic will return the trace of choosing the best linear regression model. Conparing with the existed R version ElasticNet, we using givens rotation and forward update to speed up the method which is slow when dealing with big data.
+Elastic net is a regularization and variable selection method which linearly combines the L1 penalty of the lasso and L2 penalty of ridge methods. Based on this method, elastic- net is designed to return the trace of finding the best linear regression model. Compared with the existed R version of ElasticNet, our version speeds up the algorithm by using Cholesky decomposition, Givens rotation and RcppArmadillo.
 }
 \usage{
 elasticnet(XTX, XTY, lam2, lam1 = -1)
 }
 \arguments{
   \item{XTX}{
-  The product of the transpose of independent variable x and itself. 
+  The product of the transpose of independent variable X and itself. 
   }
   \item{XTY}{
-  The product of the transpose of independent variable x and dependent variable y
+  The product of the transpose of independent variable X and response variable Y
   }
   \item{lam1}{
-  Ratio of L1-norm, which controls the degree of penalty of L1-norm. lam1 = -1 means not it is not given.
+  Penalty of L1-norm. No L1 penalty when lam1 = -1
   }
   \item{lam2}{
-  The hyper-parameter which controls the degree of penalty of L2-norm.
+  Penalty of L2-norm, a  hyper-paramater
   }
 }
 \details{
-If there is only lambda2 we put in, the ELastic Net will return a clearly entire trace of variable selection. Variable selection begin with lambda1 is as large as it only alow one variable appear in the regression model and end with lambda1 equals 0.
+When only lambda2 is given, elasticnet will return the trace of variable selection with lambda1 decreasing from lambda1_0 to zero. lambda1_0 is a value for lambda1 when there is only one predictor (the one most correlated with the response variable) in the model.
 
-But if lambda1 and lambda2 are all given, it will also return the trace but will stop at where lambda1 and lambda2 are given.
+If lambda1 and lambda2 are both given, it will also return a trace. But in this case, the trace will stop when lambda1 and lambda2 reach the given ones.
 
-To speed up the algorithm, we use some calculational tricks. Considering R is not good at solving matrix especially when dimensions of the matrix is big. So we try to build up a lower triangular matrix during the iteration of the algorithm to avoid mass matrix operation. To solving the variable's in and out based on a lower triangular matrix,  we use forward update to put variable in and givens ratation to help variable out when it is needed. In this way, we succeed in keeping matrix in lower triangular formation to speed up.
+To speed up the algorithm, we use some calculational tricks:
 
-Due to the low efficiency R dealing with loops, we choose to build the entire algorithm using RcppArmadillo, a C++ linear algebra library.
+In the consideration of the low efficiency of R dealing with high-dimensional matrix, we use lower triangular matrices during the iteration of the algorithm to avoid massive matrix calculations. When adding one predictor into the model, we update XTX by recalcuting the lower triangular matrix in the Cholesky decomposition of it. While re- moving one predictor from the model, we update the lower triangular matrix with the help of Givens rotations.
+
+Furthermore, due to the low efficiency of R dealing with loops, we rewrite the entire algorithm with RcppArmadillo, a C++ linear algebra library.
 }
 \value{
-A list will be returned, which contains a set of lambda1 where the variable included in the model will change. Also a set of coefficient corresponding to lambda1 will be contained in the list.
-If lambda1/2 is assigned, the coefficients under which will also be returned.
+A list will be returned. When only lambda2 is given, the returned list contains the trace of lambda1 (relamb) and the corresponding coefficients of the predictors (reb). If both lambda1 and lambda2 are given, the corresponding coefficients of the predictors will be returned.
 }
 
 \examples{
