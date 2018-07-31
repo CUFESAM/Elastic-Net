@@ -20,7 +20,7 @@ This function reads data into its environment and returns a list of three outcom
 The penalty of L1-norm and L2-norm is denoted by lambda1 and lambda2 respectively.
 }
 \value{
-  \item{cv.choosemodel}{Given the parameter k folds and lambda2 (optional),  cv.choosemodel performs cross-validation  to  select  the  opti-  mal lambda1 and computes the corresponding coefficient of each variable. If lambda2 is NULL, cv.choosemodel selects the optimal lambda2 from a sequence going from 0 to 0.5 in steps of 0.01 and the corresponding optimal lambda1, then it returns the coefficient of each variable.}
+  \item{cv.choosemodel}{Given the parameter k folds and lambda2 (optional),  cv.choosemodel performs cross-validation  to  select  the  opti-  mal lambda1 and computes the corresponding coefficient of each variable. If lambda2 is NULL, cv.choosemodel selects the optimal lambda2 from a sequence going from 0 to 1 in steps of 0.1 and the corresponding optimal lambda1, then it returns the coefficient of each variable.}
 A list of three outcomes will be returned:
   \item{Elasticnet}{Given lambda1 (optional) and lambda2, Elasticnet_ calculates an elastic net-regularized regression and returns the coefficients of each variable. If lambda1 is NULL, Elasticnet_ prints out the trace of lambda1 and the corresponding coefficient of each variable.}
   \item{output}{Prints the cross-validation outputs,  including the minimum   MSE, the coefficient of each variable, lambda1 and lambda2.}
