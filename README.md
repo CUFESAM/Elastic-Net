@@ -26,7 +26,7 @@
 - install `devtools`
 ```
 install.packages(devtools)
-library(devtools)
+
 ```
 - install `Rcpp` and `RcppArmadillo`
 ```
@@ -37,6 +37,10 @@ install.packages(c('Rcpp', 'RcppArmadillo'))
 devtools::install_github('CUFESAM/Elastic-Net')
 ```
 
+- install 'fasterElasticNet' without openmp support(clang with xcode)
+```
+devtools::install_github('CUFESAM/Elastic-Net', ref = 'MacOXS')
+```
 ***
 
 ### 更新日志|Update log
