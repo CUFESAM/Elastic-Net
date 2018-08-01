@@ -9,7 +9,7 @@ A subdata from kaggle "Get start" competition
 }
 \usage{data("housing")}
 \format{
-  A data frame with 19153 observations on the following 140 variables.
+  A data frame with 10153 observations on the following 140 variables.
   \describe{
     \item{\code{floor}}{for apartments, floor of the building}
     \item{\code{area_m}}{Area, sq.m.}
