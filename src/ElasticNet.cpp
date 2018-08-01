@@ -4,7 +4,7 @@
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::plugins("cpp11")]]
-// test
+
 
 void PushBack(arma::uvec & A, arma::uword & j){
 	int p = A.size();
