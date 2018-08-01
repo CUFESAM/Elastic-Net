@@ -26,4 +26,5 @@ LinkingTo: Rcpp, RcppArmadillo
 Suggests: knitr,
     rmarkdown
 URL:https://github.com/CUFESAM/Elastic-Net
+BugReports: https://github.com/CUFESAM/Elastic-Net/issues
 
