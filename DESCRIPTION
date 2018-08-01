@@ -1,8 +1,8 @@
 Package: fasterElasticNet
 Type: Package
-Title: An amazing fast way to fit elastic net
+Title: An Amazing Fast Way to Fit Elastic Net
 Version: 1.1.2
-Date: 2018-05-30
+Date: 2018-08-01
 Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
 			 person("Qiuhong","Lai",email = "lailaqiuhong@gmail.com", role = "ctb"),
 			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = "ctb"),
@@ -25,4 +25,4 @@ LinkingTo: Rcpp, RcppArmadillo
 Suggests: knitr,
     rmarkdown
 URL:https://github.com/CUFESAM/Elastic-Net
-VignetteBuilder: knitr
+
