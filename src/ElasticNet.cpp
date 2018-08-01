@@ -4,6 +4,7 @@
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::plugins("cpp11")]]
+// test
 
 void PushBack(arma::uvec & A, arma::uword & j){
 	int p = A.size();
@@ -28,7 +29,7 @@ Rcpp::List elasticnet(arma::mat & XTX, arma::vec & XTY,
 	Rcpp::LogicalVector A(p);
 	A.fill(false);
 
-	arma::vec absXTY = arma::abs(XTY) % w1; 
+	arma::vec absXTY = arma::abs(XTY) % w1;
 	arma::uword j    = absXTY.index_max();
 	A(j) = !A(j);
 
@@ -52,8 +53,8 @@ Rcpp::List elasticnet(arma::mat & XTX, arma::vec & XTY,
 
 		arma::vec SCCA = SCC(VA);
 		arma::vec td   = arma::solve(trimatl(L),w(VA) % SCCA);
-		arma::vec d    = arma::solve(trimatu(L.t()),td);			
-		arma::mat XTX_ = XTX.submat(VAm, VA); 						
+		arma::vec d    = arma::solve(trimatu(L.t()),td);
+		arma::mat XTX_ = XTX.submat(VAm, VA);
 		arma::vec a    = alpha0 * w1(VAm) % (XTX_ * d);
 		arma::vec gam(p, arma::fill::zeros);
 		arma::vec ww   = -b(VA)/d;
@@ -116,4 +117,3 @@ Rcpp::List elasticnet(arma::mat & XTX, arma::vec & XTY,
 	Rcpp::List res = Rcpp::List::create(Rcpp::Named("reb") = reb , Rcpp::Named("relamb") = relamb);
 	return(res);
 }
-
