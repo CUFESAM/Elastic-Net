@@ -17,6 +17,7 @@ Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
 			 person("Yu","Bai", email = "yukisunflower@sina.com", role = 'ctb'),
 			 person("Zhijun","Liao", email = "econzhijun@163.com", role = 'ctb')
 			 )
+Maintainer: CUFESAM <CUFEsamAD@gmail.com>
 Description: Fit elastic net, lasso and ridge in a faster way than existing r-package.
 Depends: R (>= 3.1.0)
 License: GPL (>= 2)
