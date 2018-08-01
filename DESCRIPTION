@@ -5,9 +5,8 @@ Version: 1.1.2
 Date: 2018-08-01
 Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
 			 person("Qiuhong","Lai",email = "lailaqiuhong@gmail.com", role = "ctb"),
-			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = "ctb"),
+			 person("Linyu","Zuo",email = "zuozhe5959@gmail.com", role = c("ctb","cre")),
 			 person("Yi","Yang",email = "lucious.stat.y@gmail.com", role = "ctb"),
-			 person("CUFESAM", email = "CUFEsamAD@gmail.com",role = "cre"),
 			 person("Meng","Su",email = "SUmeng97@126.com", role = "ctb"),
 			 person("Zhen","Yu", email = "amy.yuzhen@foxmail.com", role = 'ctb'),
 			 person("Gege","Gao", email = "gaogege1995@163.com", role = 'ctb'),
@@ -17,7 +16,6 @@ Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
 			 person("Yu","Bai", email = "yukisunflower@sina.com", role = 'ctb'),
 			 person("Zhijun","Liao", email = "econzhijun@163.com", role = 'ctb')
 			 )
-Maintainer: CUFESAM <CUFEsamAD@gmail.com>
 Description: Fit elastic net, lasso and ridge in a faster way than existing r-package.
 Depends: R (>= 3.1.0)
 License: GPL (>= 2)
