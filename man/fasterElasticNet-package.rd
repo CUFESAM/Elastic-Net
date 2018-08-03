@@ -14,7 +14,7 @@
 \author{
 Jingyi Ma
 
-Maintainer: CUFESAM <CUFEsamAD@gmail.com>
+Maintainer: Linyu Zuo <zuozhe5959@gmail.com>
 }
 \references{
   BRADLEY, EFRON, TREVOR, HASTIE, IAIN, JOHNSTONE, AND, ROBERT, TIBSHIRANI. LEAST ANGLE REGRESSION[J]. The Annals of Statistics, 2004, 32(2): 407-499
@@ -24,10 +24,21 @@ Maintainer: CUFESAM <CUFEsamAD@gmail.com>
   https://github.com/CUFESAM/Elastic-Net
 }
 \examples{
-  \dontrun{
+  #Use R built-in datasets mtcars for a model fitting
+  x <- mtcars[,-1]
+  y <- mtcars[, 1]
+
+  #fit model
   model <- ElasticNetCV(x,y)
 
-  model$cv.choosemodel(k = 30)
-  model$output()  
-  }
+  #fit a elastic net with lambda2 = 1
+  model$Elasticnet_(lambda2 = 1)
+
+  #choose model using cv
+  model$cv.choosemodel(k = 31)    #Leave-one-out cross validation
+  model$output()				  #See the output
+
+  #predict
+  pre <- mtcars[1:3,-1]
+  model$predict(pre)
 }

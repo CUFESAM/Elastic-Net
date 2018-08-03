@@ -28,29 +28,22 @@ A list of three outcomes will be returned:
 }
 
 \examples{
-\dontrun{
-	data(housing)
-	x <- housing[,-140]
-	y <- housing[,140]
-	cvfit <- ElasticNetCV(x,y)
+  #Use R built-in datasets mtcars for a model fitting
+  x <- mtcars[,-1]
+  y <- mtcars[, 1]
 
-	# perform cross validation and print output
-	cvfit$cv.choosemodel(k = 20)
-	cvfit$output()
+  #fit model
+  model <- ElasticNetCV(x,y)
 
-	# perform elasticnet
-	cvfit$Elasticnet_(lambda1 = 30,lambda2 = 0.005)
+  #fit a elastic net with lambda2 = 1
+  model$Elasticnet_(lambda2 = 1)
 
-	# return the trajectory of lambda1 and corresponding coefficient of each variable
-	cvfit$Elasticnet_(lambda2 = 0.005)
+  #choose model using cv
+  model$cv.choosemodel(k = 31)    #Leave-one-out cross validation
+  model$output()				  #See the output
 
-	#prediction
-
-
-	pre_index <- sample(1:dim(housing)[1],100)
-	x_pre <- housing[pre_index,-140]
-	cvfit$predict(x_pre)                  #predicted by ElasticNet
-	housing[pre_index,140]          #True Value
-}
+  #predict
+  pre <- mtcars[1:3,-1]
+  model$predict(pre)
 }
 

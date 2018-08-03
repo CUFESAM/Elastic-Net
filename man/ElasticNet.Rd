@@ -39,15 +39,13 @@ A list will be returned. When only lambda2 is given, the returned list contains 
 }
 
 \examples{
-  \dontrun{
-    install.packages(ElemStatLearn)
-    library(ElemStatLearn)
-    data(prostate)            #provide data
+    #Use R built-in datasets mtcars for a model fitting
+    x <- mtcars[,-1]
+    y <- mtcars[, 1]
 
-    x <- as.matrix(prostate[,1:8])
-    y <- prostate[,9]
     XTX <- t(x) \%*\% x
     XTY <- t(x) \%*\% y
+
+    #Prints the output of elastic net model with lambda2 = 0
     res <- elasticnet(XTX,XTY,lam2 = 0)
-  }
 }
