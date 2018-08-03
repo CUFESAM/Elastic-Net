@@ -11,7 +11,7 @@ elasticnet(XTX, XTY, lam2, lam1 = -1)
 }
 \arguments{
   \item{XTX}{
-  The product of the transpose of independent variable X and itself. 
+  The product of the transpose of independent variable X and itself.
   }
   \item{XTY}{
   The product of the transpose of independent variable X and response variable Y
@@ -40,8 +40,8 @@ A list will be returned. When only lambda2 is given, the returned list contains 
 
 \examples{
     #Use R built-in datasets mtcars for a model fitting
-    x <- mtcars[,-1]
-    y <- mtcars[, 1]
+    x <- as.matrix(mtcars[,-1])
+    y <- as.matrix(mtcars[, 1])
 
     XTX <- t(x) \%*\% x
     XTY <- t(x) \%*\% y
