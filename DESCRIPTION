@@ -16,8 +16,7 @@ Authors@R: c(person("Jingyi","Ma",email = "jingyima@163.com", role = c("aut")),
 			 person("Yu","Bai", email = "yukisunflower@sina.com", role = 'ctb'),
 			 person("Zhijun","Liao", email = "econzhijun@163.com", role = 'ctb')
 			 )
-Description: Fit Elastic Net, Lasso, and Ridge regression and do cross-validation in a fast way. We build the algorithm based on Least Angle Regression by BRADLEY EFRON, TREVOR HASTIE, IAIN JOHNSTONE, etc. (2004)(<doi:10.1214/009053604000000067 >) and some algorithms like Givens rotation and Forward/Back Substitution. In this way, many matrices to be computed are retained as triangular matrices which can eventually speed up the computation.
-The fitting algorithm for Elastic Net is written in C++ through Rcpp, used RcppArmadillo to accelerate computation.
+Description: Fit Elastic Net, Lasso, and Ridge regression and do cross-validation in a fast way. We build the algorithm based on Least Angle Regression by Bradley Efron, Trevor Hastie, Iain Johnstone, etc. (2004)(<doi:10.1214/009053604000000067 >) and some algorithms like Givens rotation and Forward/Back Substitution. In this way, many matrices to be computed are retained as triangular matrices which can eventually speed up the computation. The fitting algorithm for Elastic Net is written in C++ using Armadillo linear algebra library.
 
 Depends: R (>= 3.1.0)
 License: GPL (>= 2)
