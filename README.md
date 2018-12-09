@@ -8,7 +8,7 @@
 
 *Date*: 2018-07.19
 
-*Author*: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang
+*Author*: Jingyi Ma, Qiuhong Lai, Linyu Zuo, Xinyuan Yang, Xiao Liu, Yu Bai, Meng Su, Yi Yang, Zhijun Liao
 
 *Maintainer*: Jingyi Ma <jingyima@163.com>
 
